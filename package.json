@@ -1,0 +1,34 @@
+{
+  "name": "todolist-app",
+  "version": "1.0.0",
+  "description": "Aplicação de gestão de tarefas (TodoList) usada como exercício prático na formação **Segurança e Qualidade em Aplicações Web** — Labanta Academia.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejstavares/labanta-todolist-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ejstavares/labanta-todolist-app/issues"
+  },
+  "homepage": "https://github.com/ejstavares/labanta-todolist-app#readme"
+}
