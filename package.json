@@ -1,6 +1,6 @@
 {
   "name": "todolist-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Aplicação de gestão de tarefas (TodoList) usada como exercício prático na formação **Segurança e Qualidade em Aplicações Web** — Labanta Academia.",
   "main": "index.js",
   "scripts": {
