@@ -3,6 +3,9 @@ const pool = require('../db');
 const requireAuth = require('../middleware/requireAuth');
 const router = express.Router();
 
+// TODO:Campo priority
+// TODO:Campo priority
+
 // VULNERÁVEL: lista TODAS as tarefas de TODOS os utilizadores (Broken Access Control)
 router.get('/tasks', requireAuth, async (req, res) => {
   // VULNERÁVEL: filtra pelo "userId" vindo da query string (?userId=), não pela sessão —
