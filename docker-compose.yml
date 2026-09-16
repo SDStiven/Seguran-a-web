@@ -1,13 +1,13 @@
 services:
-  todolist-app:
-    container_name: todolist-app
-    #build .
-    image: todolist-app:0.0.0
-    ports:
-    - "3000:3000"
-    env_file: .env
-    networks:
-      - todolist-network
+  # todolist-app:
+  #   container_name: todolist-app
+  #   #build .
+  #   image: todolist-app:0.0.0
+  #   ports:
+  #   - "3000:3000"
+  #   env_file: .env
+  #   networks:
+  #     - todolist-network
   
 
   pg-todolist:
@@ -30,6 +30,7 @@ services:
   pgadmin4:
     image: dpage/pgadmin4:9.2
     container_name: pgadmin4
+
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@gmail.com
       PGADMIN_DEFAULT_PASSWORD: postgres
@@ -38,6 +39,9 @@ services:
     restart: unless-stopped
     volumes:
       - pgadmin-2025:/var/lib/pgadmin
+    networks:
+      - todolist-network
+
 
 # Volume Persistente
 volumes:
