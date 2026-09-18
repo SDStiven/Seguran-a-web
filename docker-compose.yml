@@ -1,13 +1,13 @@
 services:
-  # todolist-app:
-  #   container_name: todolist-app
-  #   #build .
-  #   image: todolist-app:0.0.0
-  #   ports:
-  #   - "3000:3000"
-  #   env_file: .env
-  #   networks:
-  #     - todolist-network
+  todolist-app:
+    container_name: todolist-app
+    build: .
+    image: todolist-app:0.0.0
+    ports:
+    - "3000:3000"
+    env_file: .env
+    networks:
+      - todolist-network
   sonarqube:
     image: sonarqube:26.1.0.118079-community
     container_name: sonarqube
@@ -57,6 +57,21 @@ services:
       - pgadmin-2025:/var/lib/pgadmin
     networks:
       - todolist-network
+  zap:
+    image: ghcr.io/zaproxy/zaproxy:stable
+    container_name: zap
+    user: zap
+    command: zap-webswing.sh
+    ports:
+      - "8080:8080"
+      - "8090:8090"
+    networks:
+      - todolist-network
+    volumes:
+      - ./zap-data:/zap/wrk
+    stdin_open: true
+    tty: true
+
 
 
 # Volume Persistente
